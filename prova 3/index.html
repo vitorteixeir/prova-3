@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Verificador de Idade</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+
+    </head>
+    <body>
+       
+          <div class="container">
+            <h1>Verificador de Idade</h1>
+            <label for="name">Insira seu nome:</label>
+            
+            <input type="text" id="name" placeholder="Seu nome">
+            <label for="dia">Dia:</label>
+            <input type="number" id="dia" min="1" max="31" >
+            
+            <label for="mes">Mês:</label>
+            <input type="number" id="mes" min="1" max="12">
+            
+            <label for="ano">Ano:</label>
+            <input type="number" id="ano" min="1900" max="2023">
+            
+            <button id="verificar">Verificar</button>
+        
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    // Selecionar os campos de entrada
+                    const diaInput = document.getElementById('dia');
+                    const mesInput = document.getElementById('mes');
+                    const anoInput = document.getElementById('ano');
+                    const verificarButton = document.getElementById('verificar');
+        
+                    // Adicionar um evento de clique ao botão
+                    verificarButton.addEventListener('click', function() {
+                        const dia = diaInput.value;
+                        const mes = mesInput.value;
+                        const ano = anoInput.value;
+        
+                        // Verificar se os campos foram preenchidos
+                        if (dia && mes && ano) {
+                            // Realizar alguma ação com os valores (exemplo: exibir em um alerta)
+                            alert(`Data selecionada: ${dia}/${mes}/${ano}`);
+                        } else {
+                            alert("Por favor, preencha todos os campos de data!");
+                        }
+                    });
+                });
+            </script>
+          <script src="script.js"></script>
+    </body>
+    </html>
+
+ 
+</body>
+</html>
